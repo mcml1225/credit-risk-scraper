@@ -1,0 +1,45 @@
+# Crear .gitignore
+New-Item -Path .gitignore -ItemType File -Force
+
+# Agregar contenido al .gitignore
+@"
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.env
+
+# Data files
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.json
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Token files
+*.pem
+*.key
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
