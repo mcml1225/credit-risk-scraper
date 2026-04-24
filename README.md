@@ -65,22 +65,21 @@ credit-risk-scraper/
 
 ### Local Setup
 
-
-# Clone the repository
+#### Clone the repository
 git clone https://github.com/mmonto37/credit-risk-scraper.git
 cd credit-risk-scraper
 
-# Create virtual environment
+#### Create virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+#### Install dependencies
 pip install -r requirements.txt
 
-# Run initial scrape
+#### Run initial scrape
 python main.py once
 
-# Launch dashboard
+#### Launch dashboard
 python dashboard_simple.py
 Usage Examples
 Run a one-time scrape
@@ -199,24 +198,24 @@ credit cycle, rating transition, distressed debt
 Configuration
 Edit config.py to customize:
 
-python
-# Change execution time (in main.py)
+
+#### Change execution time (in main.py)
 schedule.every().day.at("10:00").do(run_scraping)
 
-# Modify date range for filtering (in each scraper)
+#### Modify date range for filtering (in each scraper)
 self.cutoff_date = datetime.now().date() - timedelta(days=1)
 
-# Adjust request timeout
+#### Adjust request timeout
 REQUEST_TIMEOUT = 15
 
-# Add custom keywords for filtering
+#### Add custom keywords for filtering
 CREDIT_RISK_KEYWORDS = ['custom_keyword1', 'custom_keyword2']
 Testing
 
-# Run the simple test script
+#### Run the simple test script
 python test_simple.py
 
-# Test individual scraper
+#### Test individual scraper
 python -c "from src.scrapers.moodys_scraper import MoodysScraper; s = MoodysScraper(); df = s.get_articles_last_48h(); print(f'Found {len(df)} articles')"
 Troubleshooting
 Common Issues & Solutions
@@ -227,11 +226,11 @@ Dashboard won't load	Ensure port 8050 is free: netstat -ano | findstr :8050
 Module not found errors	Run pip install -r requirements.txt
 Date filtering not working	Check system timezone is set correctly for GMT-5
 Debug Mode
-python
-# In config.py
+
+#### In config.py
 LOG_LEVEL = "DEBUG"
 
-# This will show detailed scraping logs
+#### This will show detailed scraping logs
 Contributing
 Contributions are welcome! Please follow these steps:
 
@@ -258,7 +257,7 @@ License
 Distributed under the MIT License. See LICENSE file for more information.
 
 Authors
-Your Name - @mmonto37
+Maria Cristina - @mcml1225
 
 Acknowledgments
 Moody's Investor Services for credit risk insights
