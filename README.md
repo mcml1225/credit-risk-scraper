@@ -67,7 +67,7 @@ credit-risk-scraper/
 ### Local Setup
 
 #### Clone the repository
-git clone https://github.com/mmonto37/credit-risk-scraper.git
+git clone https://github.com/mcml1225/credit-risk-scraper.git
 cd credit-risk-scraper
 
 #### Create virtual environment
