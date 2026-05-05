@@ -31,6 +31,7 @@ Automated web scraping and visualization dashboard for credit risk news from the
 | **Logging** | Loguru |
 
 ## Project Structure
+```
 credit-risk-scraper/
 ├── .github/workflows/ # GitHub Actions automation
 │ └── scrape_daily.yml # Daily scraping workflow (10:00 AM GMT-5)
@@ -54,7 +55,7 @@ credit-risk-scraper/
 ├── requirements.txt # Python dependencies
 ├── .gitignore # Git ignore rules
 └── README.md # This file
-
+```
 
 ## Installation
 
